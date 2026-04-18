@@ -1,0 +1,6 @@
+dataset,blackbox,strategy,n_runs,runtime_mean_sec,runtime_std_sec,batch_size,epochs_opt,epochs_sur,iterations,k_batch,candidate_pool_M,gpu,cuda_version,python_version,runtime_mean_hms,runtime_std_hms
+bios,bios_csv,bo,16,27621.3999753605,12787.960298821938,256,3,4,75,16.0,1000.0,,,,0 days 07:40:21.399975360,0 days 03:33:07.960298822
+bios,bios_csv,disagreement,17,20616.651860049882,11458.231036539592,256,3,4,75,16.0,1000.0,,,,0 days 05:43:36.651860050,0 days 03:10:58.231036540
+jigsaw,hatebert,bo,90,16075.971183741445,17148.019112540853,256,3,4,100,8.0,1000.0,,,,0 days 04:27:55.971183741,0 days 04:45:48.019112541
+jigsaw,hatebert,bo_hybrid,2,2361.0420437265,257.47381744097424,1024,3,4,75,32.0,1000.0,,,,0 days 00:39:21.042043727,0 days 00:04:17.473817441
+jigsaw,hatebert,disagreement,31,23744.058099274094,23148.48762912812,2056,3,4,75,8.0,1000.0,,,,0 days 06:35:44.058099274,0 days 06:25:48.487629128

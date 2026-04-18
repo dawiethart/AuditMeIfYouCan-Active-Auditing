@@ -1,0 +1,50 @@
+{
+  "num_examples_evaluated": 100,
+  "allowed_occupations": [
+    "professor",
+    "physician",
+    "attorney",
+    "photographer",
+    "journalist",
+    "nurse",
+    "psychologist",
+    "teacher",
+    "dentist",
+    "surgeon",
+    "architect",
+    "painter",
+    "model",
+    "poet",
+    "filmmaker",
+    "software_engineer",
+    "accountant",
+    "composer",
+    "dietitian",
+    "comedian",
+    "chiropractor",
+    "pastor",
+    "paralegal",
+    "yoga_teacher",
+    "dj"
+  ],
+  "auc_male": 0.5668395757675171,
+  "auc_female": 0.5316895842552185,
+  "delta_auc": 0.035149991512298584,
+  "sanity_checks": {
+    "num_rows": 100,
+    "num_unique_ids": 100,
+    "num_duplicate_ids": 0,
+    "missing_score_columns": 0,
+    "num_bad_score_sums": 0,
+    "num_invalid_score_values": 0
+  },
+  "cost_estimate": {
+    "n_examples": 100,
+    "n_batches": 10,
+    "input_tokens_est": 13500,
+    "output_tokens_est": 3500,
+    "input_cost_usd_est": 0.003375,
+    "output_cost_usd_est": 0.007,
+    "total_cost_usd_est": 0.010375
+  }
+}

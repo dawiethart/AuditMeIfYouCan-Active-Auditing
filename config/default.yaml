@@ -1,0 +1,55 @@
+# config/default.yaml
+# Default configuration for audit experiments
+# Can be overridden via command-line arguments
+
+# Model and surrogate
+model: lora
+
+# Query budget and iteration settings
+size_T: 4  # Top-k batch size (queries per round)
+iterations: 50  # Total audit rounds
+k_batch: 8  # Batch size for selection
+
+# Surrogate model training
+use_surrogate: true
+surrogate_epochs: 2
+surrogate_lr: 0.00002
+surrogate_batch_size: 16
+surrogate_max_len: 128
+candidate_pool_M: 1000
+
+# C-ERM (Constraint Empirical Risk Minimization) training
+epochs_opt: 3  # C-ERM gradient steps per round
+epochs_sur: 3  # Surrogate training epochs
+batch_size: 32  # C-ERM batch size
+lambda_penalty: 0.5  # Constraint tolerance
+epsilon: 0.01  # Target precision / stopping threshold
+reg_alpha: 1.0  # Distribution matching penalty
+
+# Bayesian Optimization parameters
+bo_beta: 1.0  # UCB exploration parameter
+bo_acq: ucb  # Acquisition function
+bo_diversity_gamma: 0.2  # Diversity penalty weight
+
+# Selection strategy
+strategy: bo  # Options: random, stratified, disagreement, bo
+
+# Dataset and blackbox
+dataset: jigsaw  # Options: jigsaw, bios, sbic
+blackbox: hatebert  # Options: hatebert, bios_csv, perspective
+
+# Random seed for reproducibility
+seed: 0
+
+# Logging and output
+output_dir: ./outputs
+use_wandb: false
+wandb_project: audit-repo
+wandb_entity: anonymous
+wandb_prefix: audit
+title: null
+
+# Dataset-specific settings
+bios_scores_csv: null  # Path to precomputed scores
+bios_max_rows: null
+bios_targets: null
